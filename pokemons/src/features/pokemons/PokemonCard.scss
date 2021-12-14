@@ -1,0 +1,132 @@
+@import "../../mixins.scss";
+$squareImgSideMinWidth: 500px;
+.pokemonCard {
+    font-size: 36px;
+
+    &_regular {
+        @include flex-c-sa;
+        height: 1px;
+        min-width: 450px;
+        min-height: 250px;
+        border: 3px solid black;
+        box-shadow: 0 0 5px black;
+        margin: 25px 0 50px 50px;
+    }
+
+    &_full {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        margin: auto;
+        height: 90%;
+        width: 90%;
+    }
+
+    &__link {
+        @include flex-c-sa;
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+    }
+
+    &__buttonContainer {
+        height: 1px;
+        min-height: 100%;
+        min-width: 150px;
+        width: 10%;
+    }
+
+    &__button {
+        font-size: 24px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        &_theme-refresh {
+            height: 50px;
+            
+        }
+    }
+
+    &__span {
+        font-size: 24px;
+        text-orientation: upright;
+        -webkit-text-orientation: upright;
+        writing-mode: vertical-rl;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__figure {
+        text-align: center;
+        width: 50%;
+        min-width: $squareImgSideMinWidth;
+        border: 2px solid black;
+    }
+    &__figcaption {
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__stat-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 300px;
+        width: 50%;
+        min-width: 250px;
+        flex-flow: column wrap;
+        &_outer {
+            @include flex-c-sa;
+            align-items: flex-start;
+            flex-direction: row;
+            width: 50%;
+            height: 100%;
+            min-width: 500px;
+        }
+
+        &_theme-catched {
+            @include flex-c-c;
+            text-align: center;
+        }
+    }
+
+    &__stat-title {
+        width: 100%;
+        height: 20%;
+        min-height: 20%;
+        background-color: grey;
+        text-align: center;
+    }
+
+    &__stat-value {
+        width: 100%;
+        height: 20%;
+        min-height: 20%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .pokemonCard {
+        &__img {
+             width: 400px;
+             height: 400px;           
+        }
+        &__figure {
+        }
+
+        &__stat-container {
+            min-height: auto;
+
+            &_outer{
+                max-height: 20%;
+                min-height: 20%;
+                height: 20%;
+            }
+        }
+    }
+}

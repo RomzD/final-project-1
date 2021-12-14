@@ -1,0 +1,24 @@
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
+
+.navBar {
+    font-size: 32px;
+    box-sizing: border-box;
+    &_theme-regular {
+        height: 75%;
+        min-height: 75%;
+        width: 75%;
+        margin: auto;
+        background-color: $menu-color;
+        border-radius: 10px;
+    }
+}
+
+.menu-list {
+    list-style: none;
+   
+    &_flex {
+        height: 100%;
+        @include flex-c-sa;
+    }
+}

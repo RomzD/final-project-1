@@ -1,0 +1,18 @@
+@import "./../../variables.scss";
+@import "../../mixins.scss";
+$height: 15vh;
+$max-height: 300px;
+.header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+    &_regular{ 
+        @include flex-c-c;
+        height: $height;
+        min-height: $height;
+        max-height: $max-height;
+        background-color: $header-color;
+        z-index: 1;
+    }
+}

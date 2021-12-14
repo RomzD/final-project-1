@@ -1,0 +1,17 @@
+@import '../../mixins.scss';
+
+.infoContainer {
+    font-size: 36px;
+    box-sizing: border-box;
+    &_regular {
+        @include flex-c-c;
+        border: 3px solid black;
+        min-width: 100%;
+        min-height: 150px;
+    }
+
+    &_theme-pokemon-info {
+        width: 30%;
+        min-width: 250px;
+    }
+}

@@ -1,0 +1,23 @@
+@import './mixins.scss';
+
+$height: 100%;
+$width: 100%;
+
+.page-container{
+
+    &_regular {
+        @include flex-c-c;
+        flex-flow: row wrap;
+        min-height: $height;
+        min-width: $width;
+    }
+}
+
+.main {
+    @include flex-c-c;
+    flex-flow: row wrap;
+    position: relative;
+    min-width: 100%;
+    min-height: 720px;
+    height: 1px;
+}
