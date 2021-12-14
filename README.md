@@ -1,3 +1,7 @@
+Launch: 
+1. install dependencies
+2. npm start
+
 # Final project
 
 Необходимо создать приложение `pokedex`.
